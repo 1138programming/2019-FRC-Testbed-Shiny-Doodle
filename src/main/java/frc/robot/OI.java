@@ -150,7 +150,7 @@ public class OI {
     if(logitech.getTwist() > KDeadZone || logitech.getTwist() < -KDeadZone)
       return logitech.getTwist();
     else
-      return 0;
+      return 0.0;
   }
 
   public double getLeftAxis() {
@@ -159,14 +159,14 @@ public class OI {
     if(Y > KDeadZone || Y < -KDeadZone)
       return Y;
     else 
-      return 0; 
+      return 0.0; 
   }
 
   public double getRightXbox() {
     if(xbox.getY(Hand.kRight) > KDeadZone || xbox.getY(Hand.kRight) < -KDeadZone) 
       return xbox.getY(Hand.kRight);
     else 
-      return 0;
+      return 0.0;
   }
 
   public double getLeftXbox() {

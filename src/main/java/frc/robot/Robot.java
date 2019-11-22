@@ -5,7 +5,8 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.subsystems.ExampleSubsystem;
+import frc.subsystems.*;
+import frc.robot.OI;
 
 
 /**
@@ -17,12 +18,15 @@ import frc.subsystems.ExampleSubsystem;
  */
 public class Robot extends TimedRobot {
   public static ExampleSubsystem EXAMPLE_SUBSYSTEM = new ExampleSubsystem();
+  public static ArmSubsystem ARM_SUBSYSTEM = new ArmSubsystem();
+  public static OI oi;
 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
 
   @Override
   public void robotInit() {
+    oi = new OI();
   }
 
   /**
