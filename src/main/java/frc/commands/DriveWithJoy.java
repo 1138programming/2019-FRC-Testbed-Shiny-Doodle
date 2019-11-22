@@ -3,8 +3,9 @@ package frc.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class ExampleCommand extends Command {
-    public ExampleCommand() {
+public class DriveWithJoy extends Command {
+    public DriveWithJoy() {
+        requires(Robot.BASE_SUBSYSTEM);
     }
 
     @Override
@@ -13,12 +14,15 @@ public class ExampleCommand extends Command {
 
     @Override
     protected void execute() {
-        Robot.EXAMPLE_SUBSYSTEM.exampleMethod();
+        double leftSpeed = Robot.oi.getLeftAxis();
+        double rightSpeed = Robot.oi.getLeftAxis(); 
+
+        Robot.BASE_SUBSYSTEM.baseDrive(leftSpeed, rightSpeed);
     }
 
     @Override
     protected boolean isFinished() {
-        return true;
+        return false;
     }
 
     @Override
