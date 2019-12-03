@@ -11,15 +11,13 @@ import frc.commands.DriveWithJoy;
 
 public class BaseSubsystem extends Subsystem {
   private final TalonSRX leftMotor, rightMotor; 
-  public static final int KExampleFirst = 0;
-  public static final int KExampleSecond = 1; 
+  public static final int KLeftBaseMotor = 0;
+  public static final int KRightBaseMotor = 1; 
   //public static final double KSpeed = 1.0; 
 
   public BaseSubsystem() {
-    leftMotor = new TalonSRX(KExampleFirst);
-    rightMotor = new TalonSRX(KExampleSecond);
-
-    //rightMotor.follow(leftMotor);
+    leftMotor = new TalonSRX(KLeftBaseMotor);
+    rightMotor = new TalonSRX(KRightBaseMotor);
   }
 
   public void initDefaultCommand() {

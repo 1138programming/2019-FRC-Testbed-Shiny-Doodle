@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.subsystems.BaseSubsystem;
+import frc.subsystems.TurntableSubsystem;
 
 
 /**
@@ -17,6 +18,7 @@ import frc.subsystems.BaseSubsystem;
  */
 public class Robot extends TimedRobot {
   public static BaseSubsystem BASE_SUBSYSTEM = new BaseSubsystem();
+  public static TurntableSubsystem TURNTABLE_SUBSYSTEM = new TurntableSubsystem();
   public static OI oi; 
 
   Command m_autonomousCommand;
