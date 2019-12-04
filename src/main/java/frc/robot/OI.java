@@ -9,8 +9,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.commands.TurntableForward;
-import frc.commands.TurntableReverse;
+import frc.commands.*;
 
 
 public class OI {
@@ -140,6 +139,9 @@ public class OI {
     //Commands
     btn1.whenPressed(new TurntableForward());
     btn2.whenPressed(new TurntableReverse());
+
+    btn3.whenPressed(new TiltForward());
+    btn4.whenPressed(new TiltReverse());
   }
 
 
@@ -156,7 +158,7 @@ public class OI {
     if(logitech.getTwist() > KDeadZone || logitech.getTwist() < -KDeadZone)
       return logitech.getTwist();
     else
-      return 0;
+      return 0.0;
   }
 
   public double getLeftAxis() {
@@ -165,14 +167,14 @@ public class OI {
     if(Y > KDeadZone || Y < -KDeadZone)
       return Y;
     else 
-      return 0; 
+      return 0.0; 
   }
 
   public double getRightXbox() {
     if(xbox.getY(Hand.kRight) > KDeadZone || xbox.getY(Hand.kRight) < -KDeadZone) 
       return xbox.getY(Hand.kRight);
     else 
-      return 0;
+      return 0.0;
   }
 
   public double getLeftXbox() {
