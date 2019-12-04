@@ -20,7 +20,7 @@ public class TilterSubsystem extends Subsystem {
   public void initDefaultCommand() {
   }
 
-  public void tilterTalon(double speed) {
+  public void tilterMove(double speed) {
       tilterTalon.set(ControlMode.PercentOutput, speed);
   }
 }

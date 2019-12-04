@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.commands.*;
 
 
 public class OI {
@@ -134,6 +135,10 @@ public class OI {
 		btnStrtBackup = new JoystickButton(xbox, KStartButtonBackup);
 		btnLTBackup = new JoystickButton(xbox, KLeftTriggerBackup);
     btnRTBackup = new JoystickButton(xbox, KRightTriggerBackup);
+
+
+    btn3.whenPressed(new TiltForward());
+    btn4.whenPressed(new TiltReverse());
   }
 
 

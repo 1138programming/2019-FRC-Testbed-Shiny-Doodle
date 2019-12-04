@@ -19,6 +19,7 @@ import frc.robot.OI;
 public class Robot extends TimedRobot {
   public static ExampleSubsystem EXAMPLE_SUBSYSTEM = new ExampleSubsystem();
   public static ArmSubsystem ARM_SUBSYSTEM = new ArmSubsystem();
+  public static TilterSubsystem TILTER_SUBSYSTEM = new TilterSubsystem();
   public static OI oi;
 
   Command m_autonomousCommand;
